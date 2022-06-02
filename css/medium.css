@@ -1,0 +1,7 @@
+@media only screen and (min-width: 650px) {
+    #header-content {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    max-width: 800px;
+}
+}
