@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Lugo | L06</title>
+    <link rel="stylesheet" href="../css/small.css">
+    <script src="../js/portfolio.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>WDD 330 - Web Delevopment II</h1>
+        <h2>Angel Lugo Tehuitzil - Lesson 6 Notes</h2>
+        <h2><a href="../index.html">Home</a></h2>
+    </header>
+    
+    <main>
+        <h3>Chapter 8: Forms (JS Novice to Ninja)</h3>
+        <p>What I learned from this chapter was that you can use form elements to get different types of information from users. There are many controls to get these types of information. What I noticed that was the most important from the chapter, is that you can intercept this information using JS before the submit button in a form sends the information to a server. This is really helpful to validate and format that information before it is sent to the server, and then the server can validate again the information to make sure it was done correctly. To make this there is a “submit” event and a “preventDefault()” method, so that you can stop the HTML Button from sending the information to the server. Then you can use JS to process or validate the information.</p>
+
+        <p>I also learned that there is a validation API, so that you can make basic validation with the HTML. But for some cases, if you need more specific validation, you can make it with JS.</p>
+
+        <h3>Video: Using FormData Objects Effectively</h3>
+        <p><a target="_blank" href="https://www.youtube.com/watch?v=GWJhE7Licjs">Watch video</a></p>
+        <p>In this video the author explains how you can get all elements in a Form element, without having to create variables for each one of them. To do it he uses the FormData object, which gets everything inside a form and then you can send that information to the server. He also shows how you can turn your Form object into JSON, so that you can send JSON to the server instead. The most important things to remember from this video are, first, that all your inputs should have a name for the FormData object to work; second, you should prevent the submit button to send information by default using the “preventDefault()” method.</p>
+        <p>This video also shows something I didn’t noticed in the JS book, which is how you send information to the server after you have prevented the default submit. It uses a Request and the fetch method. He also uses headers in the example when sending information as JSON, so the sever knows the type of information sent.</p>
+
+        <h3>MDN: Client-Side Form Validation</h3>
+        <p>From this article I learned that you can validate form information with the built-in validation attributes on HTML5, or using JS. JS is a better option if you need more specific form validation, and when browsers don’t support HTML5 form validation. There are two ways that you can implement form validation using JS, one is using the constraint validation API, and the other is using just plain JS, which is of course a little more complicated. I must remember to study patterns in HTML5, because there were few examples in this article, and the constraint validation API because they showed only one example.</p>
+    </main>
+
+    <footer>
+        <h2><a href="../index.html">Home</a></h2>
+        <p>&copy <span id="current-year"></span> | Angel Lugo Tehuitzil | <a target="_blank" href="https://www.byui.edu/online">BYU-I Online Learning</a></p>
+        <p>Last update <span id="last-update"></span></p>
+    </footer>
+    
+</body>
+</html>

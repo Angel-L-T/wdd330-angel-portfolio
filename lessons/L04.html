@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Lugo | L04</title>
+    <link rel="stylesheet" href="../css/small.css">
+    <script src="../js/portfolio.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>WDD 330 - Web Delevopment II</h1>
+        <h2>Angel Lugo Tehuitzil - Lesson 4 Notes</h2>
+        <h2><a href="../index.html">Home</a></h2>
+    </header>
+    
+    <main>
+        <h3>Chapter 10: Testing and Debugging (JS Novice to Ninja)</h3>
+        <p>What I learned from this chapter is that errors will always occur in programming. They could be errors from the system, from the users, or from programmers. These last group of errors are those that we can work to minimize.</p>
+        <p>Errors can manifest in three different ways. They can throw an exception, which returns a value (a message to identify the error) that you can use to handle the error. Errors can also produce stack traces, that is a stack of methods that follow until the origin of the error. This is because errors sometimes can be found in closely bound pieces of code. Finally, errors can bring up warnings. This happens when an error doesn’t cause the program to stop. This could be bad for the program because it is still running but with an error that could seem like normal behavior.</p>
+        <p>It is important to identify errors soon in the development process, so we should find ways for the program to show those errors and exceptions for us to correct them.</p>
+        <p>There are different tools and techniques described in the chapter for this. Strict Mode, for example, is a mode of JS that detects more errors and produces more exceptions. You can use Strict Mode both globally or inside functions. We have also Linting tools that can help us keep structure while writing code. We can also apply feature detection which can help us with handling cases where some of the features that we want to implement are not supported for certain Browsers. There are dev-tools in browsers to debug our code. There are error objects to create our personalized error exceptions and then create exception handling in our functions for possible errors.</p>
+        <p>Finally, we can create tests to make sure that our code is working properly. There is a library shown in this chapter called Jest for testing. The lesson also shows something called Test-driven Development (TDD), which is creating programs one feature at a time by first creating the tests before the feature. We should create tests that will check for expected behavior from our functions or code. Then we should shape our code to pass those tests, refactor it or improve it, and then test it again.</p>
+
+        <h3>How Single-Page Applications Work</h3>
+        <p>The most important concept that I got from this article was that single-page applications instead of going from one page to another like normal web-pages, just update the current document to reflect changes as if you went to a different page. This means that there are no constant requests to the server for new documents or pages, but rather they just update the current loaded document. To achieve this, we can use the History API. You can use it with the Window object, using this syntax: “window.history”</p>
+        <p>There are three main methods that you can use which are, pushState(), replaceState(), and go().</p>
+
+        <h3>The Problem with Single Page Apps</h3>
+        <p>In this article I learned that creating that the bad thing about single page applications is that you end up using a lot of JavaScript to render the different “pages” on the same page. This makes the application more complex to maintain and update. The writer of the article explains that an alternative is to make multi-page applications. They are simple to make, maintain, and coupled with proper practices you can make your app as fast as a single-page application.</p>
+
+        <h3>HTML5 Template Element</h3>
+        <p>I like how the writer of the article summarized what the Template element is so I will just quote from the article this part, “Put simply, it provides an easy way to define a reusable fragment of HTML that can be manipulated just like you would the contents of the document itself…” It is also important to say the Template element though it is in the HTML document, it doesn’t get rendered. It only renders when it has been cloned.</p>
+        <p>This added just a little more light to my understanding of the template element. So, as I understood, you can use the HTML inside a template element and clone it to create more elements with the same markup, and make the changes that you want to each clone using JS.</p>
+    </main>
+
+    <footer>
+        <h2><a href="../index.html">Home</a></h2>
+        <p>&copy <span id="current-year"></span> | Angel Lugo Tehuitzil | <a target="_blank" href="https://www.byui.edu/online">BYU-I Online Learning</a></p>
+        <p>Last update <span id="last-update"></span></p>
+    </footer>
+    
+</body>
+</html>

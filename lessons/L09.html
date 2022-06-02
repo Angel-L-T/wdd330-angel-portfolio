@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Lugo | L09</title>
+    <link rel="stylesheet" href="../css/small.css">
+    <script src="../js/portfolio.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>WDD 330 - Web Delevopment II</h1>
+        <h2>Angel Lugo Tehuitzil - Lesson 9 Notes</h2>
+        <h2><a href="../index.html">Home</a></h2>
+    </header>
+    
+    <main>
+        <h3>Chapter 14: HTML5 APIs (JS: Novice to Ninja)</h3>
+        <p>The first thing that I learned in this chapter is that in HTML5 you can add and “data” attribute to elements. This attribute can hold information as a string that then can be used by a JS program. You can use that information to identify elements, or you can store little pieces of information as JS objects with JSON string notation, then in a JS program you can convert that string into an object (the attributes don’t necessarily need a value). Or if they have numbers in the string, you can later convert it into a number. These attributes can be named as we want following some rules. First, it should start with “data-“, it should contain only lowercase letters, numbers, hyphens, dots, colons or underscores, and finally you can add an optional string value. In JS you can access them first getting the element from the DOM, and then using the dataset method followed by the name of the attribute (HTML data-attribute-name = “string value” / JS element.dataset.attributeName). In JS the “data-“ isn’t used to get the attribute name, and if you use hyphens, they will be changed into camel case notation (data-attribute-name / attributeName).</p>
+        <p>Then this chapter explains the Web Storage API. This API stores information in the user’s computer which is not shared with the server. In most browsers it has a limit of 5 MB (The book says 5 GB) and it stores information in key-value string pairs. Although you can use only strings, you can store JSON data as a string that can be turned in to a JS object. There are two objects in the Web Storage API, localStorage which saves information even if you close the browser, and sessionStorage that saves information only for the current session. Local storage can be accessed by the domain that created it. These two are properties of the window object.</p>
+        <p>The book continues with the Geolocation API, which is used to get information about geographical the position of the device. The user will be asked for permission before we can use the API. The geolocation is a property from the navigator object. It has a method called getCurrentPosition() that returns a position  that then is passed into a callback function (navigator.geolocation.getCurrentPosition(callbackFunction); / the callback function receives the position object). The position has several properties that can be used by the callback function, such as position.coords.latitude and position.coords.longitude.</p>
+        <p>The next topic in the book is Web Workers. Web workers are JS files (that are preferably stored in a server) that can be brought to accomplish heavy tasks in the background, so they don’t prevent the rest of the code to run. To understand this better, let’s say we have a web app that has to run a heavy task. If that task takes too long to run you could not perform anything else in your app because is frozen; you have all of the code in the same file and your app has to wait until that heave task is done. So, to solve this you create a web worker by creating a new file that will hold the code for the heavy task. The mains JS file with the rest of the code would send a “message” to the web worker when it has to perform the task. The web worker runs the code for whatever time it takes, and in the meantime, you can still run the rest of the tasks in you main JS file. Once the web worker is done with its job, it sends a “message” back to main with the information of the heavy task completed. This way code performing demanding tasks doesn’t interrupt the rest of the app. There are also Shared Web Workers, that are shared by many files, and Service Workers, that can also intercept network requests.</p>
+        <p>Next, we have WebSocket’s which are a new protocol that keeps open communication with a server. For example, in the http protocol, the way communication works is by requests to the sever. So, receive a response from the server with every request you make. As in the book explain, this wouldn’t be ideal for a chat app, because you would have to make a request to get a message back in the chat, how would you know that there’s a message for you? So a WebSocket keeps communication open and you would receive a response from the server when a message when it is ready.</p>
+        <p>To finish this part of APIs, they also explain the Notification API, the Media API (for audio and video on web pages), and then they list some more APIs to access the camera upload files, etc. They share this link to MDN, where you can find more APIs.</p>
+
+        <p>Moving onto the next topic, the book explains a little the canvas element. If supported, the canvas element will give you a space to draw different shapes using JS.</p>
+        <p>Finally, we learn about Shims and Polyfills. Because there might be still some users using older browsers, there’s a chance that they won’t have support of many new APIs. So, there are Shims and Polyfills that will add the same functionality of new APIs in old browsers. The teaches that the main difference between Shims and Polyfills, is that the first gets similar functionality with few variations, while a Polyfill would get exactly the same functionality as if you were using the API in a modern browser.</p>
+
+        <h3>Chapter 12: Canvas, SVG, and Drag and Drop (HTML5 & CSS3 for the Real World)</h3>
+        <p>I won’t write too much about this chapter because there are many steps to follow. The chapter starts explaining the Canvas element, which is an element in which you can draw shapes or changes images and video. There are several functions in JS to draw and edit images. Then it explains SVG images, which are images that are drawn using XML. The same chapter explains that drawing complex SVG images is quite complicated by hand so they recommend using an editor called Inkscape, or a library called Raphaël to create or edit SVG images.</p>
+        <p>Finally, it explains the Drag and Drop API. This API allows you to create set draggable elements in the DOM that then can be dropped inside other elements. What happens when you drag and drop and element is handled with event listeners, and you have to add a draggable attribute to true to the elements that you want to drag.</p>
+    </main>
+
+    <footer>
+        <h2><a href="../index.html">Home</a></h2>
+        <p>&copy <span id="current-year"></span> | Angel Lugo Tehuitzil | <a target="_blank" href="https://www.byui.edu/online">BYU-I Online Learning</a></p>
+        <p>Last update <span id="last-update"></span></p>
+    </footer>
+    
+</body>
+</html>
