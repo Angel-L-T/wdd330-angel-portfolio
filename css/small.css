@@ -54,4 +54,6 @@ main {
 h3 {
     margin-top: 3rem;
     margin-bottom: 0.5rem;
+    color: #004d00;
+    border-bottom: #CCFF33 solid 5px;
 }
